@@ -6,7 +6,7 @@ mapkit.addEventListener("configuration-change", function(event) {
         new mapkit.Map(
             "map"
         );
-        console.log("MapKit JS init");
+        console.info("MapKit JS init");
         break;
     case "Refreshed":
         // The MapKit JS configuration updates.
