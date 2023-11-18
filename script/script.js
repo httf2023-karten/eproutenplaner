@@ -1,67 +1,133 @@
-// Initialize the platform object
-var platform = new H.service.Platform({
-	'apikey': 'ywXXgWjZ-a5NCDVW8-8_q_p1RyNyitRGtzubfSBafOQ'
-});
+document.getElementById("body").style.height = window.screen.availHeight/2;
+document.getElementById("body").style.width = window.screen.availWidth/2;
 
-// Obtain the default map types from the platform object
-var defaultLayers = platform.createDefaultLayers();
-var targetElement = document.getElementById('mapContainer')
-// Instantiate (and display) the map
-var map = new H.Map(
-	targetElement,
-	defaultLayers.vector.normal.map,
-	{
-		zoom: 100,
-		center: { lng: 48.26888354, lat: 48.26888354 }
-	}
-);
-
-// Create the default UI:
-const ui = H.ui.UI.createDefault(map, defaultLayers);
-
-var routingParameters = {
-	"routingMode": "fast",
-	"transportMode": "pedestrian",
-	"origin": "48.26888354,7.72201145",
-	"destination": "48.267849,7.723921",
-	"return": "polyline"
+function filter(){
+  var coastertypes = [];
+  var checkcoastertypes=["watercoaster","rollercoaster","themecoaster","transport"]
+  for(type of checkcoastertypes){
+    if(document.getElementById(type).checked){coastertypes.push(type)};
+  }
+  filterData = {
+		"age":document.getElementById("age").value,
+		"height":document.getElementById("height").value,
+		"parents":(document.getElementById("parents").value == "ja"),
+		"coastertype":coastertypes,
+		"onlypregnant":(document.getElementById("pregnant").value == "ja"),
+		"gastronomy": (document.getElementById("gastronomy").value == "ja")
+  }
+  filteredData= [];
+  possibleData=[];
+	
+  for(i of data){
+		if(filterData.gastronomy && i.type == "gastronomy"){
+			filteredData.push(i);
+		}
+    if(filterData.coastertype.includes(i.typeofcoaster) && (!filterData.onlypregnant || i.pregnant == "yes")){
+	    if(!filterData.parents){
+	      if((i.minAge != null && i.minAge <= filterData.age) && (i.minHeight != null && i.minHeight <= filterData.height)){
+	        filteredData.push(i)
+	      }
+	    }else{
+	      if((i.minAgeAdult != null && i.minAgeAdult <= filterData.age) && (i.minHeightAdult != null && i.minHeightAdult <= filterData.height)){
+	        filteredData.push(i)
+	      }
+	    }
+    }
+  }
+  console.log(JSON.stringify(filteredData));
+  map.removeAnnotations(map.annotations)
+  addFilteredAnnotations()
 }
-
-var onResult = function(result) {
-	if (result.routes.length) {
-	result.routes[0].sections.forEach((section) => {
-			 // Create a linestring to use as a point source for the route line
-			let linestring = H.geo.LineString.fromFlexiblePolyline(section.polyline);
-
-			// Create a polyline to display the route:
-			let routeLine = new H.map.Polyline(linestring, {
-				style: { strokeColor: 'blue', lineWidth: 3 }
-			});
-
-			// Create a marker for the start point:
-			let startMarker = new H.map.Marker(section.departure.place.location);
-
-			// Create a marker for the end point:
-			let endMarker = new H.map.Marker(section.arrival.place.location);
-
-			// Add the route polyline and the two markers to the map:
-			map.addObjects([routeLine, startMarker, endMarker]);
-
-			// Set the map's viewport to make the whole route visible:
-			map.getViewModel().setLookAtData({bounds: routeLine.getBoundingBox()});
-		});
-	}
-}
-
-var router = platform.getRoutingService(null, 8);
-router.calculateRoute(routingParameters, onResult,
-function(error) {
-	alert(error.message);
+mapkit.init({
+  authorizationCallback: function(done) {
+    fetch("https://fast-otter-58.deno.dev/")
+      .then(res => res.text())
+      .then(done);
+  },
+  language: "de"
 });
+function route(){
+  map.removeOverlays(map.overlays)
+  destination = map.selectedAnnotation.coordinate
+  directions.route({
+    origin: map.userLocationAnnotation.coordinate,
+    destination: destination,
+    transportType: mapkit.Directions.Transport.Walking
+  }, showRouteCallback)
+}
+function showRouteCallback(error, data) {
+  if (error != null) {
+    console.error(error)
+  } else {
+    console.log(data)
+    map.addOverlay(data.routes[0].polyline)
+  }
+}
+var map;
+var directions;
+var calloutDelegate = {
+  // Return a div element and populate it with information from the
+  // annotation, including a link to a review site.
+  calloutContentForAnnotation: function(annotation) {
+    var element = document.createElement("div");
+    element.className = "attraction-callout";
+    var title = element.appendChild(document.createElement("b"));
+    title.textContent = annotation.title;
+    var area = element.appendChild(document.createElement("p"))
+    area.textContent = annotation.data.area
+    var routing = element.appendChild(document.createElement("button"))
+    routing.textContent = "Route"
+    routing.onclick = function() {route(annotation.item)}
+    // Add more content.
+    element.style.width = "240px";
+    element.style.height = "100px";
+    console.log(element)
+    return element;
+  },
+};
 
-// MapEvents enables the event system.
-// The behavior variable implements default interactions for pan/zoom (also on mobile touch environments).
-const behavior = new H.mapevents.Behavior(new H.mapevents.MapEvents(map));
-
-// Enable dynamic resizing of the map, based on the current size of the enclosing cntainer
-window.addEventListener('resize', () => map.getViewPort().resize());
+mapkit.addEventListener("configuration-change", function(event) {
+  switch (event.status) {
+  case "Initialized":
+    defaultRegion = new mapkit.CoordinateRegion(new mapkit.Coordinate(48.267345, 7.72113), new mapkit.CoordinateSpan(0.005, 0.005))
+    directions = new mapkit.Directions({language: "de-DE"})
+    // MapKit JS initializes and configures.
+    console.info("Showing map")
+    map = new mapkit.Map('mapContainer', { region: defaultRegion, showsScale: mapkit.FeatureVisibility.Adaptive, mapType: mapkit.Map.MapTypes.Hybrid, showsPointsOfInterest: false, showsUserLocation: true, showsUserLocationControl: true });
+    console.log(mapkit.maps[0].element)
+    break;
+  case "Refreshed":
+    // The MapKit JS configuration updates.
+    addFilteredAnnotations()
+    break;
+  }
+});
+var pinColor;
+function addFilteredAnnotations() {
+  filteredData.forEach(item => {
+  // your code here
+      console.info(`Adding annotation for ${item.name}.`)
+      if (item.type = "gastronomy") {
+        pinColor = "blue"
+      } else {
+        switch (item.typeofcoaster) {
+          case "transport":
+            pinColor = "green"
+            break;
+          case "themecoaster":
+            pinColor = "purple"
+            break;
+          case "rollercoaster":
+            pinColor = "pink"
+            break;
+          case "playground":
+            pinColor = "green"
+            break;
+          default:
+            pinColor = "red"
+        }
+      }
+      annot = new mapkit.MarkerAnnotation(new mapkit.Coordinate(item.latitude, item.longitude), { color: "pink", title: item.name, callout: calloutDelegate, data: item })
+      map.addAnnotation(annot)
+  });
+}
