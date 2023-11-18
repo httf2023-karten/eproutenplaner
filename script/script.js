@@ -1,6 +1,6 @@
 document.write(JSON.stringify(data))
 
-mapkit.init({ authorizationCallback: function(done) { done("your-token"); }, ... });
+mapkit.init({ authorizationCallback: function(done) { done("your-token"); }});
 mapkit.addEventListener("configuration-change", function(event) {
     switch (event.status) {
     case "Initialized":
