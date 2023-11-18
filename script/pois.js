@@ -8,7 +8,13 @@ data = [
     "minAge": 11,
     "minAgeAdult": 11,
     "minHeight": 140,
-    "minHeightAdult": 140
+    "minHeightAdult": 140,
+    "maxspeed" : 130,
+    "typeofcoaster" : "rollercoaster",
+    "indooroutdoor" : "outdoor",
+    "time" : 3,
+    "height" : 73,
+    "pregnant" : "no"
   },
   {
     "type": "attraction",
@@ -63,7 +69,13 @@ data = [
     "minAge": 6,
     "minAgeAdult": 0,
     "minHeight": 120,
-    "minHeightAdult": 0
+    "minHeightAdult": 0,
+    "maxspeed" : null,
+    "typeofcoaster" : "transport",
+    "indooroutdoor" : "outdoor",
+    "time" : 7.1,
+    "height" : null,
+    "pregnant" : "yes"
   },
   {
     "type": "attraction",
@@ -74,7 +86,13 @@ data = [
     "minAge": 8,
     "minAgeAdult": 0,
     "minHeight": 130,
-    "minHeightAdult": null
+    "minHeightAdult": null,
+    "maxspeed" : null,
+    "typeofcoaster" : "themecoaster",
+    "indooroutdoor" : "indoor",
+    "time" : 4,
+    "height" : null,
+    "pregnant" : "no"
   },
   {
     "type": "attraction",
@@ -85,7 +103,13 @@ data = [
     "minAge": 6,
     "minAgeAdult": 0,
     "minHeight": 120,
-    "minHeightAdult": 0
+    "minHeightAdult": 0,
+    "maxspeed" : null,
+    "typeofcoaster" : "themecoaster",
+    "indooroutdoor" : "indoor",
+    "time" : 2.25,
+    "height" : null,
+    "pregnant" : "yes"
   },
   {
     "type": "attraction",
@@ -96,7 +120,13 @@ data = [
     "minAge": 6,
     "minAgeAdult": 0,
     "minHeight": 120,
-    "minHeightAdult": 0
+    "minHeightAdult": 0,
+    "maxspeed" : null,
+    "typeofcoaster" : "themecoaster",
+    "indooroutdoor" : "outdoor",
+    "time" : 8,
+    "height" : null,
+    "pregnant" : "yes"
   },
   {
     "type": "attraction",
@@ -107,7 +137,13 @@ data = [
     "minAge": 8,
     "minAgeAdult": 0,
     "minHeight": 130,
-    "minHeightAdult": 0
+    "minHeightAdult": 0,
+    "maxspeed" : null,
+    "typeofcoaster" : "themecoaster",
+    "indooroutdoor" : "indoor",
+    "time" : 8,
+    "height" : null,
+    "pregnant" : "yes"
   },
   {
     "type": "attraction",
@@ -118,7 +154,13 @@ data = [
     "minAge": 8,
     "minAgeAdult": 6,
     "minHeight": 130,
-    "minHeightAdult": 120
+    "minHeightAdult": 120,
+    "maxspeed" : 60,
+    "typofcoaster" : "rollercoaster",
+    "indooroutdoor" : "indoor",
+    "time" : 3.3,
+    "height" : 45,
+    "pregnant" : "no"
   },
   {
     "type": "attraction",
@@ -129,7 +171,13 @@ data = [
     "minAge": 8,
     "minAgeAdult": 0,
     "minHeight": 130,
-    "minHeightAdult": null
+    "minHeightAdult": null,
+    "maxspeed" : null,
+    "typeofcoaster" : null,
+    "indooroutdoor" : "indoor",
+    "time" : 6,
+    "height" : null,
+    "pregnant" : "no"
   },
   {
     "type": "attraction",
@@ -140,7 +188,13 @@ data = [
     "minAge": null,
     "minAgeAdult": null,
     "minHeight": null,
-    "minHeightAdult": null
+    "minHeightAdult": null,
+    "maxspeed" : null,
+    "typeofcoaster" : "playground",
+    "indooroutdoor" : "outdoor",
+    "time" : null,
+    "height" : null,
+    "pregnant" : "yes"
   },
   {
     "type": "attraction",
@@ -184,7 +238,13 @@ data = [
     "minAge": 6,
     "minAgeAdult": 0,
     "minHeight": 120,
-    "minHeightAdult": 0
+    "minHeightAdult": 0,
+    "maxspeed" : null,
+    "typeofcoaster" : "transport",
+    "indooroutdoor" : "outdoor",
+    "time" : 15,
+    "height" : null,
+    "pregnant" : "yes"
   },
   {
     "type": "attraction",
@@ -195,7 +255,13 @@ data = [
     "minAge": 6,
     "minAgeAdult": 0,
     "minHeight": 120,
-    "minHeightAdult": 0
+    "minHeightAdult": 0,
+    "maxspeed" : null,
+    "typeofcoaster" : "transport",
+    "indooroutdoor" : "outdoor",
+    "time" : 15,
+    "height" : null,
+    "pregnant" : "yes"
   },
   {
     "type": "attraction",
@@ -206,7 +272,13 @@ data = [
     "minAge": 6,
     "minAgeAdult": 0,
     "minHeight": 120,
-    "minHeightAdult": 0
+    "minHeightAdult": 0,
+    "maxspeed" : null,
+    "typeofcoaster" : "transport",
+    "indooroutdoor" : "outdoor",
+    "time" : 15,
+    "height" : null,
+    "pregnant" : "yes"
   },
   {
     "type": "attraction",
@@ -217,7 +289,13 @@ data = [
     "minAge": 2,
     "minAgeAdult": 2,
     "minHeight": null,
-    "minHeightAdult": null
+    "minHeightAdult": null,
+    "maxspeed" : null,
+    "typeofcoaster" : "playground",
+    "indooroutdoor" : "indoor",
+    "time" : null,
+    "height" : null,
+    "pregnant" : "no"
   },
   {
     "type": "attraction",
@@ -228,7 +306,13 @@ data = [
     "minAge": 3,
     "minAgeAdult": null,
     "minHeight": null,
-    "minHeightAdult": null
+    "minHeightAdult": null,
+    "maxspeed" : null,
+    "typeofcoaster" : "playground",
+    "indooroutdoor" : "indoor",
+    "time" : null,
+    "height" : null,
+    "pregnant" : "no" 
   },
   {
     "type": "attraction",
@@ -250,7 +334,13 @@ data = [
     "minAge": 6,
     "minAgeAdult": 0,
     "minHeight": 120,
-    "minHeightAdult": 0
+    "minHeightAdult": 0,
+    "maxspeed" : null,
+    "typeofcoaster" : "themecoaster",
+    "indooroutdoor" : "indoor",
+    "time" : 3.1,
+    "height" : null,
+    "pregnant" : "yes"
   },
   {
     "type": "attraction",
@@ -261,7 +351,13 @@ data = [
     "minAge": 6,
     "minAgeAdult": 3,
     "minHeight": 120,
-    "minHeightAdult": 90
+    "minHeightAdult": 90,
+    "maxspeed" : null,
+    "typeofcoaster" : null,
+    "indooroutdoor" : "outdoor",
+    "time" : 2,
+    "height" : null,
+    "pregnant" : "no"
   },
   {
     "type": "attraction",
@@ -272,7 +368,13 @@ data = [
     "minAge": 6,
     "minAgeAdult": 0,
     "minHeight": 120,
-    "minHeightAdult": 0
+    "minHeightAdult": 0,
+    "maxspeed" : null,
+    "typeofcoaster" : null,
+    "indooroutdoor" : "outdoor",
+    "time" : 2,
+    "height" : null,
+    "pregnant" : "yes"
   },
   {
     "type": "attraction",
@@ -283,7 +385,13 @@ data = [
     "minAge": 6,
     "minAgeAdult": 0,
     "minHeight": 120,
-    "minHeightAdult": 0
+    "minHeightAdult": 0,
+    "maxspeed" : null,
+    "typeofcoaster" : "themecoaster",
+    "indooroutdoor" : "outdoor",
+    "time" : 5.15,
+    "height" : null,
+    "pregnant" : "yes"
   },
   {
     "type": "attraction",
@@ -294,7 +402,13 @@ data = [
     "minAge": 6,
     "minAgeAdult": 0,
     "minHeight": 120,
-    "minHeightAdult": 0
+    "minHeightAdult": 0,
+    "maxspeed" : null,
+    "typeofcoaster" : "transport",
+    "indooroutdoor" : "outdoor",
+    "time" : 13,
+    "height" : 6,
+    "pregnant" : "yes"
   },
   {
     "type": "attraction",
@@ -305,7 +419,13 @@ data = [
     "minAge": 6,
     "minAgeAdult": 0,
     "minHeight": 120,
-    "minHeightAdult": 0
+    "minHeightAdult": 0,
+    "maxspeed" : null,
+    "typeofcoaster" : "transport",
+    "indooroutdoor" : "outdoor",
+    "time" : 13,
+    "height" : 6,
+    "pregnant" : "yes"
   },
   {
     "type": "attraction",
@@ -316,7 +436,13 @@ data = [
     "minAge": 6,
     "minAgeAdult": 0,
     "minHeight": 120,
-    "minHeightAdult": 0
+    "minHeightAdult": 0,
+    "maxspeed" : null,
+    "typeofcoaster" : "transport",
+    "indooroutdoor" : "outdoor",
+    "time" : 13,
+    "height" : 6,
+    "pregnant" : "yes"
   },
   {
     "type": "attraction",
@@ -327,7 +453,13 @@ data = [
     "minAge": 6,
     "minAgeAdult": null,
     "minHeight": 120,
-    "minHeightAdult": null
+    "minHeightAdult": null,
+    "maxspeed" : null,
+    "typeofcoaster" : null,
+    "indooroutdoor" : "outdoor",
+    "time" : 7.3,
+    "height" : 75,
+    "pregnant" : "yes"
   },
   {
     "type": "attraction",
@@ -338,7 +470,13 @@ data = [
     "minAge": 10,
     "minAgeAdult": 4,
     "minHeight": 130,
-    "minHeightAdult": 100
+    "minHeightAdult": 100,
+    "maxspeed" : null,
+    "typeofcoaster" : null,
+    "indooroutdoor" : "outdoor",
+    "time" : 1.3,
+    "height" : null,
+    "pregnant" : "no"
   },
   {
     "type": "attraction",
@@ -360,7 +498,13 @@ data = [
     "minAge": 8,
     "minAgeAdult": 5,
     "minHeight": 130,
-    "minHeightAdult": 110
+    "minHeightAdult": 110,
+    "maxspeed" : null,
+    "typeofcoaster" : null,
+    "indooroutdoor" : "indoor",
+    "time" : 3.3,
+    "height" : null,
+    "pregnant" : "no"
   },
   {
     "type": "attraction",
@@ -371,7 +515,13 @@ data = [
     "minAge": 10,
     "minAgeAdult": 6,
     "minHeight": 130,
-    "minHeightAdult": 120
+    "minHeightAdult": 120,
+    "maxspeed" : null,
+    "typeofcoaster" : null,
+    "indooroutdoor" : "outdoor",
+    "time" : 1.3,
+    "height" : null,
+    "pregnant" : "no",
   },
   {
     "type": "attraction",
@@ -382,7 +532,13 @@ data = [
     "minAge": 8,
     "minAgeAdult": 4,
     "minHeight": 130,
-    "minHeightAdult": 100
+    "minHeightAdult": 100,
+    "maxspeed" : null,
+    "typeofcoaster" : null,
+    "indooroutdoor" : "outdoor",
+    "time" : 2.5,
+    "height" : null,
+    "pregnant" : "no"
   },
   {
     "type": "attraction",
@@ -393,7 +549,13 @@ data = [
     "minAge": 8,
     "minAgeAdult": 4,
     "minHeight": 130,
-    "minHeightAdult": 100
+    "minHeightAdult": 100,
+    "maxspeed" : null,
+    "typeofcoaster" : null,
+    "indooroutdoor" : "indoor",
+    "time" :1.3,
+    "height" : null,
+    "pregnant" : "no"
   },
   {
     "type": "attraction",
@@ -404,7 +566,13 @@ data = [
     "minAge": 4,
     "minAgeAdult": 0,
     "minHeight": null,
-    "minHeightAdult": null
+    "minHeightAdult": null,
+    "maxspeed" : null,
+    "typeofcoaster" : null,
+    "indooroutdoor" : "outdoor",
+    "time" : 1.5,
+    "height" : null,
+    "pregnant" : "no"
   },
   {
     "type": "attraction",
@@ -415,7 +583,13 @@ data = [
     "minAge": 6,
     "minAgeAdult": 0,
     "minHeight": 120,
-    "minHeightAdult": 0
+    "minHeightAdult": 0,
+    "maxspeed" : null,
+    "typeofcoaster" : null,
+    "indooroutdoor" : "outdoor",
+    "time" : 2,
+    "height" : 7,
+    "pregnant" : "no"
   },
   {
     "type": "attraction",
@@ -426,7 +600,13 @@ data = [
     "minAge": 8,
     "minAgeAdult": 3,
     "minHeight": 130,
-    "minHeightAdult": 90
+    "minHeightAdult": 90,
+    "maxspeed" : null,
+    "typeofcoaster" : null,
+    "indooroutdoor" : "outdoor",
+    "time" : 5,
+    "height" : 7,
+    "pregnant" : "no"
   },
   {
     "type": "attraction",
@@ -437,7 +617,14 @@ data = [
     "minAge": 6,
     "minAgeAdult": 0,
     "minHeight": 120,
-    "minHeightAdult": 0
+    "minHeightAdult": 0,
+    "maxspeed" : null,
+    "typeofcoaster" : "themecoaster",
+    "indooroutdoor" :"outdoor",
+    "time" : 4.4,
+    "height" : null,
+    "pregnant" : "yes"
+
   },
   {
     "type": "attraction",
@@ -448,7 +635,13 @@ data = [
     "minAge": 8,
     "minAgeAdult": 6,
     "minHeight": 130,
-    "minHeightAdult": 120
+    "minHeightAdult": 120,
+    "maxspeed" : 60,
+    "typeofcoaster" : "rollercoaster",
+    "indooroutdoor" : "outdoor",
+    "time" : 2.2,
+    "height" : 16,
+    "pregnant" : "no"
   },
   {
     "type": "attraction",
@@ -459,7 +652,13 @@ data = [
     "minAge": 3,
     "minAgeAdult": 3,
     "minHeight": 90,
-    "minHeightAdult": 90
+    "minHeightAdult": 90,
+    "maxspeed" : null,
+    "typeofcoaster" : null,
+    "indooroutdoor" : "outdoor",
+    "time" : 2,
+    "height" : null,
+    "pregnant" : "no"
   },
   {
     "type": "attraction",
@@ -470,7 +669,13 @@ data = [
     "minAge": 6,
     "minAgeAdult": 0,
     "minHeight": 120,
-    "minHeightAdult": 0
+    "minHeightAdult": 0,
+    "maxspeed" : null,
+    "typeofcoaster" : "themecoaster",
+    "indooroutdoor" : "outdoor",
+    "time" : 3,
+    "height" : null,
+    "pregnant" : "yes"
   },
   {
     "type": "attraction",
@@ -481,7 +686,14 @@ data = [
     "minAge": 8,
     "minAgeAdult": 0,
     "minHeight": 130,
-    "minHeightAdult": 0
+    "minHeightAdult": 0,
+    "maxspeed" : null,
+    "typeofcoaster" : "themcoaster",
+    "indooroutdoor" : "outdoor",
+    "time" : 2.38,
+    "height" : null,
+    "pregnant" : "yes"
+
   },
   {
     "type": "attraction",
@@ -492,7 +704,13 @@ data = [
     "minAge": 6,
     "minAgeAdult": 0,
     "minHeight": 120,
-    "minHeightAdult": 0
+    "minHeightAdult": 0,
+    "maxspeed" : null,
+    "typeofcoaster" : "transport",
+    "indooroutdoor" : "outdoor",
+    "time" : 15,
+    "height" : null,
+    "pregnant" : "yes"
   },
   {
     "type": "attraction",
@@ -503,7 +721,13 @@ data = [
     "minAge": 8,
     "minAgeAdult": 4,
     "minHeight": 130,
-    "minHeightAdult": 100
+    "minHeightAdult": 100,
+    "maxspeed" : 65,
+    "typeofcoaster" : "rollercoaster",
+    "indooroutdoor" : "outdoor",
+    "time" : 2.11,
+    "height" : 13,
+    "pregnant" : "no"
   },
   {
     "type": "attraction",
@@ -514,7 +738,13 @@ data = [
     "minAge": 8,
     "minAgeAdult": 4,
     "minHeight": 130,
-    "minHeightAdult": 100
+    "minHeightAdult": 100,
+    "maxspeed" : null,
+    "typeofcoaster" : null,
+    "indooroutdoor" : "outdoor",
+    "time" : 1.35,
+    "height" : null,
+    "pregnant" : "no"
   },
   {
     "type": "attraction",
@@ -525,7 +755,13 @@ data = [
     "minAge": 3,
     "minAgeAdult": 3,
     "minHeight": 90,
-    "minHeightAdult": 90
+    "minHeightAdult": 90,
+    "maxspeed" : null,
+    "typeofcoaster" : null, 
+    "indooroutdoor" : "outdoor",
+    "time" : 2.3,
+    "height" : null,
+    "pregnant" : "no"
   },
   {
     "type": "attraction",
@@ -536,7 +772,13 @@ data = [
     "minAge": 8,
     "minAgeAdult": 6,
     "minHeight": 130,
-    "minHeightAdult": 120
+    "minHeightAdult": 120,
+    "maxspeed" : 50,
+    "typeofcoaster" : "rollercoaster",
+    "indooroutdoor" : "outdoor",
+    "time" : 2.05,
+    "height" : 20,
+    "pregnant" : "no"
   },
   {
     "type": "attraction",
@@ -547,7 +789,13 @@ data = [
     "minAge": 10,
     "minAgeAdult": 3,
     "minHeight": 130,
-    "minHeightAdult": 90
+    "minHeightAdult": 90,
+    "maxspeed" : null,
+    "typeofcoaster" : null,
+    "indooroutdoor" : "outdoor",
+    "time" : 1.45,
+    "height" : null,
+    "pregnant" : "no"
   },
   {
     "type": "attraction",
@@ -558,7 +806,13 @@ data = [
     "minAge": 6,
     "minAgeAdult": 4,
     "minHeight": 120,
-    "minHeightAdult": 100
+    "minHeightAdult": 100,
+    "maxspeed" : null,
+    "typeofcoaster" : null,
+    "indooroutdoor" : "outdoor",
+    "time" : 2,
+    "height" : 8.5,
+    "pregnant" : "no"
   },
   {
     "type": "attraction",
@@ -569,7 +823,13 @@ data = [
     "minAge": 6,
     "minAgeAdult": 0,
     "minHeight": 120,
-    "minHeightAdult": 0
+    "minHeightAdult": 0,
+    "maxspeed" : null,
+    "typeofcoaster" : null, 
+    "indooroutdoor" : "outoor",
+    "time" : 2,
+    "height" : null,
+    "pregnant" : "yes"
   },
   {
     "type": "attraction",
@@ -580,7 +840,15 @@ data = [
     "minAge": 8,
     "minAgeAdult": 0,
     "minHeight": 130,
-    "minHeightAdult": 0
+    "minHeightAdult": 0,
+    "maxspeed" : null,
+    "typeofcoaster" : "themecoaster",
+    "indooroutdoor" : "indoor",
+    "time" : 5.5,
+    "height" : null,
+    "pregnant" : "yes"
+
+
   },
   {
     "type": "attraction",
@@ -591,7 +859,13 @@ data = [
     "minAge": 8,
     "minAgeAdult": 4,
     "minHeight": 130,
-    "minHeightAdult": 100
+    "minHeightAdult": 100,
+    "maxspeed" : null,
+    "typeofcoaster" : null,
+    "indooroutdoor" : "outdoor",
+    "time" : 2,
+    "height" : null,
+    "pregnant" : "no"
   },
   {
     "type": "attraction",
@@ -602,7 +876,13 @@ data = [
     "minAge": null,
     "minAgeAdult": null,
     "minHeight": null,
-    "minHeightAdult": null
+    "minHeightAdult": null,
+    "maxspeed" : null,
+    "typeofcoaster" : "playground",
+    "indooroutdoor" : "outdoor",
+    "time" : null,
+    "height" : null,
+    "pregnant" : "no"
   },
   {
     "type": "attraction",
@@ -613,7 +893,13 @@ data = [
     "minAge": null,
     "minAgeAdult": null,
     "minHeight": null,
-    "minHeightAdult": null
+    "minHeightAdult": null,
+    "maxspeed" : null,
+    "typeofcoaster" : "themecoaster",
+    "indooroutdoor" : "outdoor",
+    "time" : 2.3,
+    "height" :null,
+    "pregnant" : null
   },
   {
     "type": "attraction",
@@ -691,6 +977,8 @@ data = [
     "minAgeAdult": null,
     "minHeight": null,
     "minHeightAdult": null
+    
+    
   },
   {
     "type": "gastronomy",
@@ -723,7 +1011,13 @@ data = [
     "minAge": null,
     "minAgeAdult": null,
     "minHeight": null,
-    "minHeightAdult": null
+    "minHeightAdult": null,
+    "maxspeed" : null,
+    "typeofcoaster" : null,
+    "indooroutdoor" : "indoor",
+    "time" : 2,
+    "height" : null,
+    "pregnant" : "no"
   },
   {
     "type": "gastronomy",
@@ -1009,7 +1303,13 @@ data = [
     "minAge": 8,
     "minAgeAdult": 5,
     "minHeight": null,
-    "minHeightAdult": null
+    "minHeightAdult": null,
+    "maxspeed" : null,
+    "typeofcoaster" : null,
+    "indooroutdoor" : "indoor",
+    "time" : null, 
+    "height" : null,
+    "pregnant" : "no"
   },
   {
     "type": "attraction",
@@ -1020,7 +1320,13 @@ data = [
     "minAge": 8,
     "minAgeAdult": 0,
     "minHeight": 130,
-    "minHeightAdult": 0
+    "minHeightAdult": 0,
+    "maxspeed" : null,
+    "typeofcoaster" : "watercoaster",
+    "indooroutdoor" : "outdoor",
+    "time" : 4.4,
+    "height" : null,
+    "pregnant" : "yes"
   },
   {
     "type": "gastronomy",
@@ -1053,7 +1359,13 @@ data = [
     "minAge": 6,
     "minAgeAdult": 0,
     "minHeight": 120,
-    "minHeightAdult": 0
+    "minHeightAdult": 0,
+    "maxspeed" : null,
+    "typeofcoaster" : "transport",
+    "indooroutdoor" : "outdoor",
+    "time" : 7.1,
+    "height" : null,
+    "pregnant" : "yes"
   },
   {
     "type": "attraction",
@@ -1076,6 +1388,7 @@ data = [
     "minAgeAdult": 6,
     "minHeight": 120,
     "minHeightAdult": 120
+   
   },
   {
     "type": "attraction",
@@ -1196,7 +1509,13 @@ data = [
     "minAge": 6,
     "minAgeAdult": 4,
     "minHeight": 120,
-    "minHeightAdult": 100
+    "minHeightAdult": 100,
+    "maxspeed" : null,
+    "typeofcoaster" : null,
+    "indooroutdoor" : "indoor",
+    "time" : null,
+    "height" : null,
+    "pregnant" : "no"
   },
   {
     "type": "attraction",
@@ -1208,6 +1527,12 @@ data = [
     "minAgeAdult": 0,
     "minHeight": 100,
     "minHeightAdult": 0
+    "maxspeed" : null,
+    "typeofcoaster" : null,
+    "indooroutdoor" : "indoor",
+    "time" : null,
+    "height" : null,
+    "pregnant" : "no"
   },
   {
     "type": "attraction",
@@ -1218,7 +1543,13 @@ data = [
     "minAge": null,
     "minAgeAdult": null,
     "minHeight": null,
-    "minHeightAdult": null
+    "minHeightAdult": null,
+    "maxspeed" : null,
+    "typeofcoaster" : "playground",
+    "indooroutdoor" : "indoor",
+    "time" : null,
+    "height" : null,
+    "pregnant" : "no"
   },
   {
     "type": "attraction",
@@ -1240,7 +1571,13 @@ data = [
     "minAge": null,
     "minAgeAdult": null,
     "minHeight": null,
-    "minHeightAdult": null
+    "minHeightAdult": null,
+    "maxspeed" : null,
+    "typeofcoaster" : "playground",
+    "indooroutdoor" : "outdoor"
+    "time" : null,
+    "height" : null,
+    "pregnant" : "yes"
   },
   {
     "type": "gastronomy",
@@ -1274,6 +1611,12 @@ data = [
     "minAgeAdult": 3,
     "minHeight": 130,
     "minHeightAdult": 95
+    "maxspeed" : null,
+    "typeofcoaster" : null,
+    "indooroutdoor" : "outdoor",
+    "time" : 1.4,
+    "height" : 9,
+    "pregnant" : "no"
   },
   {
     "type": "attraction",
@@ -1284,7 +1627,13 @@ data = [
     "minAge": 6,
     "minAgeAdult": 4,
     "minHeight": 120,
-    "minHeightAdult": 100
+    "minHeightAdult": 100,
+    "maxspeed" : null,
+    "typeofcoaster" : null,
+    "indooroutdoor" : "outdoor"
+    "time" : 1.45,
+    "height" : null,
+    "pregnant" : "no"
   },
   {
     "type": "attraction",
@@ -1295,8 +1644,13 @@ data = [
     "minAge": null,
     "minAgeAdult": null,
     "minHeight": null,
-    "minHeightAdult": null
-  },
+    "minHeightAdult": null,
+    "maxspeed" : null,
+    "typeofcoaster" : "playground",
+    "indooroutdoor" : "outdoor",
+    "time" : null,
+    "height" : null,
+    "pregnant" : "yes"
   {
     "type": "attraction",
     "name": "Old Mac Donald's Tractor Fun",
@@ -1306,7 +1660,13 @@ data = [
     "minAge": 6,
     "minAgeAdult": 0,
     "minHeight": 120,
-    "minHeightAdult": 0
+    "minHeightAdult": 0,
+    "maxspeed" : null,
+    "typeofcoaster" : "themecoaster",
+    "indooroutdoor" : "outdoor",
+    "time" : 1.3,
+    "height" : null,
+    "pregnant" : "yes"
   },
   {
     "type": "attraction",
@@ -1317,7 +1677,13 @@ data = [
     "minAge": null,
     "minAgeAdult": null,
     "minHeight": null,
-    "minHeightAdult": null
+    "minHeightAdult": null,
+    "maxspeed" null,
+    "typeofcoaster" : "playground",
+    "indooroutdoor" : "outdoor",
+    "time" : null,
+    "height" : null,
+    "pregnant" : "yes"
   },
   {
     "type": "attraction",
@@ -1328,7 +1694,13 @@ data = [
     "minAge": 6,
     "minAgeAdult": 3,
     "minHeight": 120,
-    "minHeightAdult": 90
+    "minHeightAdult": 90,
+    "maxspeed" : null,
+    "typeofcoaster" : "rollercoaster",
+    "indooroutdoor" : "outdoor",
+    "time" : 1.3,
+    "height" : null,
+    "pregnant" : "no"
   },
   {
     "type": "attraction",
@@ -1339,7 +1711,13 @@ data = [
     "minAge": 6,
     "minAgeAdult": 0,
     "minHeight": 120,
-    "minHeightAdult": 0
+    "minHeightAdult": 0,
+    "maxspeed" : null,
+    "typeofcoaster" : "watercoaster"
+    "indooroutdoor" : "outdoor",
+    "time" : 2,
+    "height" : null,
+    "pregnant" : "yes"
   },
   {
     "type": "attraction",
@@ -1350,7 +1728,13 @@ data = [
     "minAge": 8,
     "minAgeAdult": 3,
     "minHeight": 130,
-    "minHeightAdult": 90
+    "minHeightAdult": 90,
+    "maxspeed" : null,
+    "typeofcoaster" : null, 
+    "indooroutdoor" : "outdoor",
+    "time" : 1.3,
+    "height" : null,
+    "pregnant" : "no"
   },
   {
     "type": "gastronomy",
@@ -1372,7 +1756,13 @@ data = [
     "minAge": 4,
     "minAgeAdult": null,
     "minHeight": null,
-    "minHeightAdult": null
+    "minHeightAdult": null,
+    "maxspeed" : null,
+    "typeofcoaster" : "playground",
+    "indooroutdoor" : "indoor",
+    "time" : null,
+    "height" : null,
+    "pregnant" : "yes"
   },
   {
     "type": "gastronomy",
@@ -1394,7 +1784,13 @@ data = [
     "minAge": 4,
     "minAgeAdult": 1,
     "minHeight": null,
-    "minHeightAdult": null
+    "minHeightAdult": null 
+    "maxspeed" : null, 
+    "typeofcoaster" : "playground",
+    "indooroutdoor" : "outdoor",
+    "time" : null,
+    "height" : null,
+    "pregnant" : "yes"
   },
   {
     "type": "gastronomy",
@@ -1449,7 +1845,14 @@ data = [
     "minAge": 8,
     "minAgeAdult": 4,
     "minHeight": 130,
-    "minHeightAdult": 100
+    "minHeightAdult": 100,
+    "maxspeed" : null,
+    "typeofcoaster" : "themecoaster",
+    "indooroutdoor" : "indoor",
+    "time" : 4.45,
+    "height" : null,
+    "pregnant" : "no"
+
   },
   {
     "type": "gastronomy",
@@ -1493,7 +1896,13 @@ data = [
     "minAge": 14,
     "minAgeAdult": 14,
     "minHeight": 130,
-    "minHeightAdult": 130
+    "minHeightAdult": 130,
+    "maxspeed" : 60,
+    "typeofcoaster" : "rollercoaster",
+    "indooroutdoor" : "indoor",
+    "time" : 7,
+    "height" : 45,
+    "pregnant" : "no"
   },
   {
     "type": "attraction",
@@ -1548,7 +1957,13 @@ data = [
     "minAge": 8,
     "minAgeAdult": 0,
     "minHeight": 130,
-    "minHeightAdult": 0
+    "minHeightAdult": 0,
+    "maxspeed" : null,
+    "typeofcoaster" : "themecoaster",
+    "indooroutdoor" : "indoor",
+    "time" : 4.3,
+    "height" : null,
+    "pregnant" : "yes"
   },
   {
     "type": "gastronomy",
@@ -1581,7 +1996,13 @@ data = [
     "minAge": 7,
     "minAgeAdult": 7,
     "minHeight": 130,
-    "minHeightAdult": 130
+    "minHeightAdult": 130,
+    "maxspeed" : 100,
+    "typeofcoaster" : "rollercoaster",
+    "indooroutdoor" : "outdoor",
+    "time" : 2.2,
+    "height" : 38,
+    "pregnant" : "no"
   },
   {
     "type": "attraction",
@@ -1592,7 +2013,13 @@ data = [
     "minAge": 8,
     "minAgeAdult": 6,
     "minHeight": 130,
-    "minHeightAdult": 120
+    "minHeightAdult": 120,
+    "maxspeed" : 100,
+    "typeofcoaster" : "rollercoaster",
+    "indooroutdoor" : "outdoor",
+    "time" : 2.3,
+    "height" : 40, 
+    "pregnant" : "no"
   },
   {
     "type": "attraction",
@@ -1603,7 +2030,13 @@ data = [
     "minAge": 8,
     "minAgeAdult": 8,
     "minHeight": 130,
-    "minHeightAdult": 130
+    "minHeightAdult": 130,
+    "maxspeed" : 80,
+    "typeofcoaster" : "rollercoaster",
+    "indooroutdoor" : "outdoor",
+    "time" : 5,
+    "height" : 28.3,
+    "pregnant" : "no"
   },
   {
     "type": "attraction",
@@ -1614,7 +2047,13 @@ data = [
     "minAge": 6,
     "minAgeAdult": 4,
     "minHeight": 120,
-    "minHeightAdult": 100
+    "minHeightAdult": 100,
+    "maxspeed" : null,
+    "typeofcoaster" : "rollercoaster",
+    "indooroutdoor" : "indoor",
+    "time" : 4.3, 
+    "height" : null,
+    "pregnant" : "no"
   },
   {
     "type": "gastronomy",
@@ -1691,7 +2130,13 @@ data = [
     "minAge": 8,
     "minAgeAdult": 6,
     "minHeight": 130,
-    "minHeightAdult": 120
+    "minHeightAdult": 120,
+    "maxspeed" : 70,
+    "typeofcoaster" : "watercoaster",
+    "indooroutdoor" : "outdoor",
+    "time" : 5.5,
+    "height" : 23,
+    "pregnant" : "no"
   },
   {
     "type": "gastronomy",
