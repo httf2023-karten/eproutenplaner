@@ -15,9 +15,9 @@ function filter(){
 		"onlypregnant":(document.getElementById("pregnant").value == "ja"),
 		"gastronomy": (document.getElementById("gastronomy").value == "ja")
   }
-  filteredData= [];
-  possibleData=[];
-	
+  filteredData = [];
+  possibleData = [];
+
   for(i of data){
 		if(filterData.gastronomy && i.type == "gastronomy"){
 			filteredData.push(i);
@@ -34,7 +34,7 @@ function filter(){
 	    }
     }
   }
-  console.log(JSON.stringify(filteredData));
+  //console.log(JSON.stringify(filteredData));
   map.removeAnnotations(map.annotations)
   addFilteredAnnotations()
 }
@@ -59,7 +59,6 @@ function showRouteCallback(error, data) {
   if (error != null) {
     console.error(error)
   } else {
-    console.log(data)
     map.addOverlay(data.routes[0].polyline)
   }
 }
@@ -80,8 +79,7 @@ var calloutDelegate = {
     routing.onclick = function() {route(annotation.item)}
     // Add more content.
     element.style.width = "240px";
-    element.style.height = "100px";
-    console.log(element)
+    element.style.height = "120px";
     return element;
   },
 };
@@ -89,12 +87,11 @@ var calloutDelegate = {
 mapkit.addEventListener("configuration-change", function(event) {
   switch (event.status) {
   case "Initialized":
-    defaultRegion = new mapkit.CoordinateRegion(new mapkit.Coordinate(48.267345, 7.72113), new mapkit.CoordinateSpan(0.005, 0.005))
+    defaultRegion = new mapkit.CoordinateRegion(new mapkit.Coordinate(48.265289, 7.721272), new mapkit.CoordinateSpan(0.008, 0.008))
     directions = new mapkit.Directions({language: "de-DE"})
     // MapKit JS initializes and configures.
     console.info("Showing map")
     map = new mapkit.Map('mapContainer', { region: defaultRegion, showsScale: mapkit.FeatureVisibility.Adaptive, mapType: mapkit.Map.MapTypes.Hybrid, showsPointsOfInterest: false, showsUserLocation: true, showsUserLocationControl: true });
-    console.log(mapkit.maps[0].element)
     break;
   case "Refreshed":
     // The MapKit JS configuration updates.
@@ -106,13 +103,13 @@ var pinColor;
 function addFilteredAnnotations() {
   filteredData.forEach(item => {
   // your code here
-      console.info(`Adding annotation for ${item.name}.`)
-      if (item.type = "gastronomy") {
-        pinColor = "blue"
+      //console.info(`Adding annotation for ${item.name}.`)
+      if (item.type == "gastronomy") {
+        pinColor = "teal"
       } else {
         switch (item.typeofcoaster) {
           case "transport":
-            pinColor = "green"
+            pinColor = "lightskyblue"
             break;
           case "themecoaster":
             pinColor = "purple"
@@ -124,10 +121,10 @@ function addFilteredAnnotations() {
             pinColor = "green"
             break;
           default:
-            pinColor = "red"
+            pinColor = "#ff5b40"
         }
       }
-      annot = new mapkit.MarkerAnnotation(new mapkit.Coordinate(item.latitude, item.longitude), { color: "pink", title: item.name, callout: calloutDelegate, data: item })
+      annot = new mapkit.MarkerAnnotation(new mapkit.Coordinate(item.latitude, item.longitude), { color: pinColor, title: item.name, callout: calloutDelegate, data: item })
       map.addAnnotation(annot)
   });
 }
