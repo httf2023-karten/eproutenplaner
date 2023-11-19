@@ -1,6 +1,3 @@
-document.getElementById("body").style.height = window.screen.availHeight/2;
-document.getElementById("body").style.width = window.screen.availWidth/2;
-
 function filter(){
   var coastertypes = [];
   var checkcoastertypes=["watercoaster","rollercoaster","themecoaster","transport"]
@@ -17,6 +14,7 @@ function filter(){
   }
   filteredData = [];
   possibleData = [];
+	newFilteredData = []
 
   for(i of data){
 		if(filterData.gastronomy && i.type == "gastronomy"){
@@ -34,10 +32,41 @@ function filter(){
 	    }
     }
   }
-  //console.log(JSON.stringify(filteredData));
-  map.removeAnnotations(map.annotations)
-  addFilteredAnnotations()
+	newFilteredData = filteredData.slice();
 }
+
+function selectItems(){
+	document.getElementById("list").innerHTML= '<button onclick="finishedFiltering()">ausgewähltes auf der Karte anzeigen.</button>'
+	for(i=0;i<filteredData.length;i++){
+		element = filteredData[i]
+		document.getElementById("list").innerHTML+= (element.name+` <input type="checkbox" onchange="handleChange(this);"  id="${i}" checked><br>`);
+	}
+	
+	
+}
+function handleChange(checkbox) {
+		if(checkbox.checked == true){
+			newFilteredData[checkbox.id] = filteredData[checkbox.id];
+		}else{
+			newFilteredData[checkbox.id] = undefined;
+	 }
+}
+
+
+function finishedFiltering(){
+	for(i=0;i<newFilteredData.length;i++){
+		if(newFilteredData[i] == undefined){
+			delete newFilteredData[i];
+		}
+	}
+	console.log(filteredData)
+	console.log(newFilteredData)
+	filteredData = newFilteredData.slice();
+	map.removeAnnotations(map.annotations)
+	addFilteredAnnotations()
+	filter();
+}
+
 mapkit.init({
   authorizationCallback: function(done) {
     fetch("https://fast-otter-58.deno.dev/")
@@ -62,6 +91,7 @@ function showRouteCallback(error, data) {
     map.addOverlay(data.routes[0].polyline)
   }
 }
+
 var map;
 var directions;
 var calloutDelegate = {
@@ -74,12 +104,26 @@ var calloutDelegate = {
     title.textContent = annotation.title;
     var area = element.appendChild(document.createElement("p"))
     area.textContent = annotation.data.area
+    var table = element.appendChild(document.createElement("table"))
+    console.log(table)
+    var ch = table.insertRow(0)
+    table.id = "calloutTable"
+    var elements = 0
+    var currentRow = 0
+    for (key of possibleKeys) {
+      if (annotation.data[key] != undefined) {
+        var row = table.insertRow(currentRow)
+        row.innerHTML = `<td>${fn[key]}</td><td>${annotation.data[key]}</td>`
+        currentRow++
+      }
+    }
     var routing = element.appendChild(document.createElement("button"))
     routing.textContent = "Route"
     routing.onclick = function() {route(annotation.item)}
     // Add more content.
     element.style.width = "240px";
-    element.style.height = "120px";
+    element.style.height = "auto";
+    console.log(element)
     return element;
   },
 };
@@ -87,7 +131,7 @@ var calloutDelegate = {
 mapkit.addEventListener("configuration-change", function(event) {
   switch (event.status) {
   case "Initialized":
-    defaultRegion = new mapkit.CoordinateRegion(new mapkit.Coordinate(48.265289, 7.721272), new mapkit.CoordinateSpan(0.008, 0.008))
+    defaultRegion = new mapkit.CoordinateRegion(new mapkit.Coordinate(48.265289, 7.721272), new mapkit.CoordinateSpan(0.01, 0.01))
     directions = new mapkit.Directions({language: "de-DE"})
     // MapKit JS initializes and configures.
     console.info("Showing map")

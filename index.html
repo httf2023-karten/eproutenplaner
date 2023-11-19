@@ -18,10 +18,9 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-
+	<script src="script/friendlyKeyNames.js"></script>
 </head>
 <body id="body">
-  <script src="script/pois.js"></script>
 	<ul class= "ul">
 		<li class="li"><a class="a" href="/">Home</a></li>
 		<li class="li"><a class="a" href="/about">About</a></li>
@@ -35,26 +34,26 @@
         	<label for="height">Größe (in cm):</label>
         	<input type="number" id="height" min="0" step="10" value="180">
         	<br><br>
-					<label for="parents">Mit deinen Eltern?:</label>
+					<label for="parents">Mit deinen Eltern?</label>
 					<select id="parents">
 						<option value="nein">Nein</option>
 						<option value="ja">Ja</option>
-					</select> <i id="smaller">*manche Bahnen können nur mit Eltern gefahren werden</i>
+					</select> <i id="smaller">*manche Bahnen können Kinder nur mit ihren Eltern fahren </i>
 					<br><br>
-					Welche Arten von Attraktion?:<br>
-					<label for="watercoaster"> Wasserrutsche</label>
+					Welche Arten von Attraktionen?:<br>
+					<label for="watercoaster"> Wasserrutschen</label>
 					<input type="checkbox" id="watercoaster" value="watercoaster" checked><br>
-					<label for="rollercoaster"> Achterbahn</label>
+					<label for="rollercoaster"> Achterbahnen</label>
 					<input type="checkbox" id="rollercoaster" value="rollercoaster" checked><br>
-					<label for="themecoaster"> Themenachterbahn</label>
+					<label for="themecoaster"> Themenbahnen</label>
 					<input type="checkbox" id="themecoaster" value="themecoaster" checked><br>
 					<label for="transport"> Transportmittel</label>
 					<input type="checkbox" id="transport" value="transport" checked>
 					<br><br>
-					<label for="pregnant">Bahnen sind erlaubt für...</label>
+					<label for="pregnant">Sind Sie schwanger?</label>
 					<select id="pregnant">
-						<option value="nein">alle außer Schwangeren</option>
-						<option value="ja">Schwangere</option>
+						<option value="nein" >Nein</option>
+						<option value="ja">Ja</option>
 					</select><br><br>
 					<label for="gastronomy"> Restaurants:</label>
 					<select id="gastronomy">
@@ -62,14 +61,44 @@
 						<option value="nein">Nein, nur Attraktionen</option>
 					</select>
 					<br><br>
-					<button onclick="filter()" type="button" class="btn btn-light">Filtern</button>
+					<button onclick="filter();selectItems();" type="button" class="btn btn-light">Filtern</button>
 			</span>
       </div>
     </li>
   </ul>
-	
   <div id="mapContainer"></div>
+  <div id="legend">
+      <table>
+        <tr>
+          <th>Type</th>
+          <th>Color</th>
+        </tr>
+        <tr>
+          <td>Transport</td>
+          <td style="color:lightskyblue">hellblau</td>
+        </tr>
+        <tr>
+          <td>Themenbahn</td>
+          <td style="color:purple">lila</td>
+        </tr>
+        <tr>
+          <td>Spielplatz</td>
+          <td style="color:green">grün</td>
+        </tr>
+        <tr>
+           <td>Sonstiges</td>
+           <td style="color:#ff5d40">orange</td>
+        </tr>
+         <tr>
+          <td>Achterbahn</td>
+          <td style="color:pink">pink</td>
+        </tr>
+      </table>
+      <hr>
+    <div id="list" class="scroll">
+    </div>
+    </div>
+	<script src="script/pois.js"></script>
   <script src="script/script.js"></script>
 </body>
 </html>
-

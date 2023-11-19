@@ -31,11 +31,13 @@ html {
 	margin: 0;
 	padding: 0;
 	overflow: hidden;
-	background-color: #333333;}
+	background-color: #333333;
+}
 .li {
 	float: left;
 }
 .liright {
+ 
 	float: right;
 }
 .li .a {
@@ -65,9 +67,23 @@ html {
 	background-color: #111111;
 }
 #mapContainer {
-	width: 100%;
+  position: absolute;
+  left: 0px;
+	width: 80%;
 	height: 91vh;
+}
+#legend {
+	width:18%;
+	position: absolute;
+	right:1%;
 }
 #smaller {
   font-size: 8px;
+}
+
+div.scroll {
+	overflow-x: hidden;
+	overflow-y: auto;
+	width: 100%;
+	flex-grow: 8;
 }

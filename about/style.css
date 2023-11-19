@@ -11,7 +11,9 @@ html {
 	margin: 0;
 	padding: 0;
 	overflow: hidden;
-	background-color: #333333;}
+	background-color: #333333;
+  position: sticky;
+}
 .li {
 	float: left;}
 .li .a {
